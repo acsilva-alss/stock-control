@@ -1,11 +1,11 @@
 import Cpf from './Cpf'
+import Item from './Item'
 import OrderItem from './OrderItem'
 
 export default class Order{
   readonly orderCode: string
   readonly orderItems: OrderItem[]
   readonly cpf: Cpf
-  private total = 0
   constructor(userCPF: string, readonly orderDate: Date, sequency = 1){
     this.cpf = new Cpf(userCPF)
     this.orderCode = this.generateOrderCode(orderDate, sequency)
@@ -18,12 +18,15 @@ export default class Order{
     return  `${orderDateYear}${orderSequency}`
   }
 
-  public addOrderItem(orderItem: OrderItem){
-    this.orderItems.push(orderItem)
-    this.total += orderItem.price * orderItem.quantity
+  public addItem(item: Item, quantity: number){
+    const newOrderItem = new OrderItem(item.id, quantity, item.price)
+    this.orderItems.push(newOrderItem)
   }
 
-  public getTotal() {
-    return this.total
+  public getTotalOrder() {
+    return this.orderItems.reduce((totalOrder, orderItem) => {
+      totalOrder += orderItem.getTotal()
+      return totalOrder
+    }, 0)
   }
 }
