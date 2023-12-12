@@ -1,6 +1,6 @@
-import Item from "../src/Item"
-import Order from "../src/Order"
-import OrderItem from "../src/OrderItem"
+import Dimension from "../src/domain/entities/Dimension"
+import Item from "../src/domain/entities/Item"
+import Order from "../src/domain/entities/Order"
 
 describe('Tests on order entity', () => {
   test('Should not create a order with invalid CPF', () => {
@@ -13,14 +13,13 @@ describe('Tests on order entity', () => {
   })
 
   test('Should create a order with 3 items', () => {
-    const newItem1 = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100)
-    const newItem2 = new Item(2, 'Cavaquinho', 'Cavaquinho para samba', 200)
-    const newItem3 = new Item(3, 'Rebolo', 'Rebolo para samba', 50)
+    const newItem1 = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100, new Dimension(2, 3, 4, 5))
+    const newItem2 = new Item(2, 'Cavaquinho', 'Cavaquinho para samba', 200, new Dimension(3, 4, 5, 6))
+    const newItem3 = new Item(3, 'Rebolo', 'Rebolo para samba', 50, new Dimension(7, 8, 9, 10))
     const newOrder = new Order('056.196.430-00', new Date('2023-03-10T10:00:00'))
     newOrder.addItem(newItem1, 10)
     newOrder.addItem(newItem2, 5)
     newOrder.addItem(newItem3, 1)
     expect(newOrder.getTotalOrder()).toBe(2050)
-
   })
 })

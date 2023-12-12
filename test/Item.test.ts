@@ -1,4 +1,5 @@
-import Dimension from "../src/Dimension"
+import Dimension from "../src/domain/entities/Dimension"
+import Item from "../src/domain/entities/Item"
 
 const volumeCases =[
   [20, 15, 10, 1, 0.003],
@@ -17,13 +18,15 @@ describe('Tests on dimension entity', () => {
     height, width, deep, weight, resultVolume
   ) => {
     const dimension = new Dimension(height, width, deep, weight)
-    expect(dimension.getVolume()).toBe(resultVolume)
+    const item = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100, dimension)
+    expect(item.getVolume()).toBe(resultVolume)
   })
 
   test.each(densityCases)('Given a heigth: %p, width: %p, deep: %p and weight: %p, return the density: %p  ', (
     height, width, deep, weight, resultDensity
   ) => {
     const dimension = new Dimension(height, width, deep, weight)
-    expect(dimension.getDensity()).toBe(resultDensity)
+    const item = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100, dimension)
+    expect(item.getDensity()).toBe(resultDensity)
   })
 })
