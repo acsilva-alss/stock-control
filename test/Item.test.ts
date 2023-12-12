@@ -1,5 +1,4 @@
-import Dimension from "../src/domain/entities/Dimension"
-import Item from "../src/domain/entities/Item"
+import { Item, Dimension } from '../src/domain/entities'
 
 const volumeCases =[
   [20, 15, 10, 1, 0.003],

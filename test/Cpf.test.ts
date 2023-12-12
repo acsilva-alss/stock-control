@@ -1,4 +1,4 @@
-import Cpf from "../src/domain/entities/Cpf"
+import { Cpf } from '../src/domain/entities'
 
 const invalidsCpf = [
   '',

@@ -1,4 +1,4 @@
-export default class Cpf {
+export class Cpf {
   private DIVIDER_SUM_DIGITS = 11
   private NUMBER_SUM_FIRST_DIGIT = 10
   private NUMBER_SUM_SECOND_DIGIT = 11

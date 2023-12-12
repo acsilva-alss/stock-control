@@ -1,6 +1,4 @@
-import Dimension from "../src/domain/entities/Dimension"
-import Item from "../src/domain/entities/Item"
-import Order from "../src/domain/entities/Order"
+import { Order, Item, Dimension } from '../src/domain/entities/'
 
 describe('Tests on order entity', () => {
   test('Should not create a order with invalid CPF', () => {

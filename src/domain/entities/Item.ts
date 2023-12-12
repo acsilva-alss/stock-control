@@ -1,6 +1,6 @@
-import Dimension from "./Dimension";
+import { Dimension } from './'
 
-export default class Item {
+export class Item {
   constructor(
     readonly id: number,
     readonly name: string,

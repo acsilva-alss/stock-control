@@ -1,6 +1,6 @@
-import Item from './Item'
+import { Item } from './'
 
-export default class Freight {
+export class Freight {
   totalFreight = 0
   FACTOR = 100
 

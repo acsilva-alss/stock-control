@@ -1,8 +1,6 @@
-import Cpf from './Cpf'
-import Item from './Item'
-import OrderItem from './OrderItem'
+import { Cpf, Item, OrderItem } from './'
 
-export default class Order{
+export class Order{
   readonly orderCode: string
   readonly orderItems: OrderItem[]
   readonly cpf: Cpf

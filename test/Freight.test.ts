@@ -1,6 +1,4 @@
-import Dimension from '../src/domain/entities/Dimension'
-import Freight from '../src/domain/entities/Freight'
-import Item from '../src/domain/entities/Item'
+import { Item, Freight, Dimension} from '../src/domain/entities'
 
 describe('Tests on Freight entity', () => {
   test('should return minimal price', () => {
