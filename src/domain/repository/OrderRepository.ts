@@ -1,11 +1,6 @@
+import { Order } from "../entities"
+
 export interface OrderRepository {
-  getOrder(code: string): Promise<{
-    code: string
-    orderItems: Array<{
-      itemName: string
-      quantity: number
-      price: number
-    }>
-    total: number
-  }>
+  getOrder(code: string): Promise<Order>
+  saveOrder(order: Order): Promise<{orderCode: string}>
 }
