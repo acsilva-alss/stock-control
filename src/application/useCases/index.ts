@@ -1,2 +1,2 @@
-export * from './GetOrder'
 export * from './SaveOrder'
+export * from './SimulateFreight'

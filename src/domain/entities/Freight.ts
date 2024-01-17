@@ -4,7 +4,7 @@ export class Freight {
   totalFreight = 0
   FACTOR = 100
 
-  addItem(item: Item, quantity: number, distance: number){
+  public addItem(item: Item, quantity: number, distance: number): void{
     const freight = item.getVolume() * distance * (item.getDensity()/this.FACTOR)
     this.totalFreight += freight * quantity
   }
