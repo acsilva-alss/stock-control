@@ -1,16 +1,28 @@
+import crypto from 'crypto'
 import { Dimension } from './'
 
+const MAX_RANDOM_ID = 5000
+
 export class Item {
-  constructor(
+  private constructor(
     readonly id: number,
-    readonly name: string,
+    readonly category: string,
     readonly description: string,
     readonly price: number,
     readonly dimension: Dimension
   ){}
 
+  static create(category: string, description: string, price: number, dimension: Dimension) {
+    const fakeIdItem = crypto.randomInt(MAX_RANDOM_ID)
+    return new Item(fakeIdItem, category, description, price, dimension)
+  }
+
+  static restore(id: number, category: string, description: string, price: number, dimension: Dimension) {
+    return new Item(id, category, description, price, dimension)
+  }
+
   public getVolume(): number {
-    const volume = this.dimension.height * this.dimension.width * this.dimension.deep
+    const volume = this.dimension.height * this.dimension.width * this.dimension.length
     return this.transformCubicMeters(volume)
   }
 

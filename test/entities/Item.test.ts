@@ -17,7 +17,7 @@ describe('Tests on dimension entity', () => {
     height, width, deep, weight, resultVolume
   ) => {
     const dimension = new Dimension(height, width, deep, weight)
-    const item = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100, dimension)
+    const item = Item.create('Pandeiro', 'Pandeiro para samba', 100, dimension)
     expect(item.getVolume()).toBe(resultVolume)
   })
 
@@ -25,7 +25,7 @@ describe('Tests on dimension entity', () => {
     height, width, deep, weight, resultDensity
   ) => {
     const dimension = new Dimension(height, width, deep, weight)
-    const item = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100, dimension)
+    const item = Item.create('Pandeiro', 'Pandeiro para samba', 100, dimension)
     expect(item.getDensity()).toBe(resultDensity)
   })
 })

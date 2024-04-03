@@ -11,9 +11,9 @@ describe('Tests on order entity', () => {
   })
 
   test('Should create a order with 3 items', () => {
-    const newItem1 = new Item(1, 'Pandeiro', 'Pandeiro para samba', 100, new Dimension(2, 3, 4, 5))
-    const newItem2 = new Item(2, 'Cavaquinho', 'Cavaquinho para samba', 200, new Dimension(3, 4, 5, 6))
-    const newItem3 = new Item(3, 'Rebolo', 'Rebolo para samba', 50, new Dimension(7, 8, 9, 10))
+    const newItem1 = Item.create('Pandeiro', 'Pandeiro para samba', 100, new Dimension(2, 3, 4, 5))
+    const newItem2 = Item.create('Cavaquinho', 'Cavaquinho para samba', 200, new Dimension(3, 4, 5, 6))
+    const newItem3 = Item.create('Rebolo', 'Rebolo para samba', 50, new Dimension(7, 8, 9, 10))
     const newOrder = new Order('056.196.430-00', new Date('2023-03-10T10:00:00'))
     newOrder.addItem(newItem1, 10)
     newOrder.addItem(newItem2, 5)
