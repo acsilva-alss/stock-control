@@ -21,7 +21,8 @@ export class SaveOrder {
     const order = new Order(userCPF, orderDate, 1)
     for(const orderItems of items){
       const { id, quantity } = orderItems
-      const item = await this.itemRepository.getItem(id)
+      const item = await this.itemRepository.getById(id)
+      if(!item) throw new Error('Order error! Item not found.')
       order.addItem(item, quantity)
     }
     const orderCode = await this.orderRepository.saveOrder(order) 
