@@ -12,7 +12,8 @@ export class SimulateFreight {
     const freight = new Freight()
     for(const inputItem of input) {
       const {idItem, quantity, distance} = inputItem
-      const item = await this.itemRepository.getItem(idItem)
+      const item = await this.itemRepository.getById(idItem)
+      if(!item) throw new Error('Simulate freight error! Item not found.')
       freight.addItem(item, quantity, distance)
     }
     return {
