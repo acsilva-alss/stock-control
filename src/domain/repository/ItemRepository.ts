@@ -1,5 +1,7 @@
 import { Item } from '../entities'
 
 export interface ItemRepository {
-  getItem(id: number): Promise<Item>
+  getById(id: number): Promise<Item | undefined>
+  save(item: Item): Promise<void>
+  clear(): Promise<void>
 }

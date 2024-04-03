@@ -7,14 +7,17 @@ export class ItemRepositoryMemory implements ItemRepository {
     this.items = []
   }
   
-  async getItem(id: number): Promise<Item> {
+  async getById(id: number): Promise<Item | undefined> {
     const item = this.items.find(item => item.id === id)
-    if(!item) throw new Error('Item not found')
     return item
   }
 
-  async saveItem(item: Item): Promise<void> {
+  async save(item: Item): Promise<void> {
     this.items.push(item)
+  }
+
+  async clear(): Promise<void> {
+    throw new Error("Method not implemented.");
   }
 
 }
