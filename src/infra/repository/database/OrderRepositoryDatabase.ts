@@ -1,5 +1,6 @@
-import { Order, OrderRepository } from '../../../domain'
-import { Connection } from '../../connection/Connection';
+import { Order,  } from '@/domain'
+import { OrderRepository } from "@/application"
+import { Connection } from '../../connection'
 
 export class OrderRepositoryDatabase implements OrderRepository {
   constructor(readonly connection: Connection){}
@@ -11,6 +12,5 @@ export class OrderRepositoryDatabase implements OrderRepository {
   saveOrder(order: Order): Promise<{ orderCode: string; }> {
     throw new Error('Method not implemented.');
   }
-
   
 }

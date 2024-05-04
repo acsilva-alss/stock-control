@@ -1,5 +1,7 @@
-import { StockEntry, StockEntryRepository } from "../../../domain"
-import { Connection } from "../../connection/Connection"
+import { StockEntry,  } from "@/domain"
+import { StockEntryRepository } from "@/application"
+
+import { Connection } from "../../connection"
 
 export class StockEntryRepositoryDatabase implements StockEntryRepository {
   constructor(readonly connection: Connection){}

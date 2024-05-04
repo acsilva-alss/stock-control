@@ -1,4 +1,5 @@
-import { Item, ItemRepository, Order } from "../../domain"
+import { Item } from "@/domain"
+import { ItemRepository } from "../repository"
 
 type Output = {
   item: Item

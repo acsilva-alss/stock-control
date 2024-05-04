@@ -1,4 +1,4 @@
-import { Item } from '../entities'
+import { Item } from '@/domain'
 
 export interface ItemRepository {
   getById(id: number): Promise<Item | undefined>

@@ -1,7 +1,7 @@
 
-import pgPromise, { IInitOptions } from 'pg-promise'
+import pgPromise from 'pg-promise'
 import { Connection } from './Connection'
-import config from '../../config'
+import config from '@/config'
 
 export class PgPromiseAdapter implements Connection {
   pgp

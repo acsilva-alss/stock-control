@@ -1,4 +1,4 @@
-import { Item, Dimension } from '../../src/domain/entities'
+import { Item, Dimension } from '@/domain'
 
 const volumeCases =[
   [20, 15, 10, 1, 0.003],

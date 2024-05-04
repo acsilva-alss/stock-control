@@ -1,6 +1,6 @@
-import { SaveOrder } from "../../src/application/useCases/SaveOrder"
-import { Dimension, Item, Order } from "../../src/domain"
-import { ItemRepositoryMemory, OrderRepositoryMemory } from "../../src/infra/repository"
+import { SaveOrder } from "@/application"
+import { Dimension, Item, Order } from "@/domain"
+import { ItemRepositoryMemory, OrderRepositoryMemory } from "@/infra"
 
 let saveOrder: SaveOrder
 

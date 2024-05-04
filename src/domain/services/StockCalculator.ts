@@ -1,4 +1,4 @@
-import { StockEntry } from "../entities";
+import { StockEntry } from "../entities"
 
 export class StockCalculator {
   constructor(){}

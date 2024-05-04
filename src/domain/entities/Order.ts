@@ -1,4 +1,6 @@
-import { Cpf, Item, OrderItem } from './'
+import { Cpf } from './Cpf'
+import { Item } from './Item'
+import { OrderItem } from './OrderItem'
 
 export class Order{
   readonly orderCode: string

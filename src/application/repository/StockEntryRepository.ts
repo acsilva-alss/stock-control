@@ -1,4 +1,4 @@
-import { StockEntry } from "../entities"
+import { StockEntry } from "@/domain"
 
 export interface StockEntryRepository {
   save(stockEntry: StockEntry): Promise<void>

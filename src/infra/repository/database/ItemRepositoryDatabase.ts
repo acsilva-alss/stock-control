@@ -1,5 +1,7 @@
-import { Dimension, Item, ItemRepository } from "../../../domain";
-import { Connection } from "../../connection/Connection";
+import { Dimension, Item } from "@/domain"
+import { ItemRepository } from "@/application"
+import { Connection } from "../../connection/"
+
 
 export class ItemRepositoryDatabase implements ItemRepository {
   constructor(readonly connection: Connection){}

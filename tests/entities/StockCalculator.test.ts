@@ -1,7 +1,6 @@
-import { StockEntry } from "../../src/domain"
-import { StockCalculator } from "../../src/domain/services/StockCalculator"
+import { StockEntry, StockCalculator } from "@/domain"
 
-describe('', () => {
+describe('Tests on stock calculater domain service', () => {
   test('Should return stock quantity', () => {
     const stockEntries = [
       new StockEntry(1, 'in', 10),

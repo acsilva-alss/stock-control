@@ -1,4 +1,5 @@
-import { ItemRepository, Order, OrderRepository } from "../../domain"
+import { Order } from "@/domain"
+import { ItemRepository, OrderRepository } from "../repository"
 
 type Input = {
   userCPF: string

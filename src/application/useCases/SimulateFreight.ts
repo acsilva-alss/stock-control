@@ -1,4 +1,5 @@
-import { Freight, ItemRepository } from "../../domain"
+import { Freight } from "@/domain"
+import { ItemRepository } from "../repository"
 
 type Input = {
   idItem: number

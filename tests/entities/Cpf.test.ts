@@ -1,4 +1,4 @@
-import { Cpf } from '../../src/domain/entities'
+import { Cpf } from '@/domain'
 
 const invalidsCpf = [
   '',

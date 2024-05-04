@@ -1,6 +1,6 @@
-import { SimulateFreight } from "../../src/application/useCases"
-import { Dimension, Item } from "../../src/domain"
-import { ItemRepositoryMemory } from "../../src/infra/repository"
+import { SimulateFreight } from "@/application"
+import { Dimension, Item } from "@/domain"
+import { ItemRepositoryMemory } from "@/infra"
 
 describe('Tests on the simulate freight use case', () => {
   test('Should simulate freight to two items', async ()=> {

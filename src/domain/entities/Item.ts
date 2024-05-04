@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { Dimension } from './'
+import { Dimension } from './Dimension'
 
 const MAX_RANDOM_ID = 5000
 

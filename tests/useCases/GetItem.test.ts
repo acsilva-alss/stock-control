@@ -1,6 +1,6 @@
-import { GetItem } from "../../src/application/useCases/GetItem"
-import { Dimension, Item } from "../../src/domain"
-import { ItemRepositoryMemory } from "../../src/infra/repository"
+import { GetItem } from "@/application"
+import { Dimension, Item } from "@/domain"
+import { ItemRepositoryMemory } from "@/infra"
 
 let getItem: GetItem
 

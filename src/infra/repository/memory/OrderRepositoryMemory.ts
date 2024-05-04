@@ -1,4 +1,6 @@
-import { Order, OrderRepository } from "../../../domain"
+import { Order,  } from "@/domain"
+import { OrderRepository } from "@/application"
+
 
 export class OrderRepositoryMemory implements OrderRepository {
   orders: Order[]

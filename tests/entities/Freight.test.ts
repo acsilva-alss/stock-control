@@ -1,4 +1,4 @@
-import { Item, Freight, Dimension} from '../../src/domain/entities'
+import { Item, Freight, Dimension} from '@/domain'
 
 describe('Tests on Freight entity', () => {
   test('should return minimal price', () => {
